@@ -1,16 +1,9 @@
 import React from 'react';
 
-import types from '../../src/components/atoms/Input/props';
-import {
-  AutocompleteInput,
-  InputWithLeftIcon,
-  InputDefault,
-} from '../../src/components/atoms/Input/storybookExamples';
-
-import { projects, componentTypes } from '../titlePath';
+import types from './props';
+import { AutocompleteInput, InputWithLeftIcon, InputDefault } from './storybookExamples';
 
 export default {
-  title: `${projects.template}/${componentTypes.atom}/Input`,
   component: InputDefault,
   argTypes: {
     placeholder: {

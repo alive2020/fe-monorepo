@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { sizes, types } from './props';
+
 import Button, {
   ButtonWithIcon,
   LargeButton,
@@ -9,14 +11,9 @@ import Button, {
   PillSmallButton,
   FullLargeButton,
   FullMediumButton,
-} from '../../src/components/atoms/Button';
-
-import { sizes, types } from '../../src/components/atoms/Button/props';
-
-import { projects, componentTypes } from '../titlePath';
+} from '.';
 
 export default {
-  title: `${projects.template}/${componentTypes.atom}/Buttons`,
   component: Button,
   argTypes: {
     bgColor: { control: 'color' },

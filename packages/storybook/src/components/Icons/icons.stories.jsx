@@ -2,12 +2,11 @@ import React from 'react';
 
 import { colors } from '@namespace/web-shared/styles/theme';
 
-import { TextP3 } from '../../src/components/atoms/Typography';
-import * as icons from '../../src/components/Icons';
-import { projects, componentTypes } from '../titlePath';
+import { TextP3 } from '../atoms/Typography';
+
+import * as icons from '.';
 
 export default {
-  title: `${projects.template}/${componentTypes.icon}/Icons`,
   component: icons.CloseIcon,
   argTypes: {},
 };
@@ -54,7 +53,7 @@ CloseModalIcon.args = {
 export const EyeCrossedIcon = function (args) {
   return <icons.EyeCrossedIcon {...args} />;
 };
-DisconnectedIcon.args = {
+EyeCrossedIcon.args = {
   width: 24,
   height: 24,
   color: colors.grayH212528,

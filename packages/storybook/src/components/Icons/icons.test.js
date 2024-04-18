@@ -4,12 +4,9 @@ import { render, screen } from '@testing-library/react';
 
 import CloseIcon from './CloseIcon';
 import CloseModalIcon from './CloseModalIcon';
-
 import EyeCrossedIcon from './EyeCrossedIcon';
 import EyeIcon from './EyeIcon';
-
 import RectangleIcon from './RectangleIcon';
-
 import SearchIcon from './SearchIcon';
 
 const testComponent = (component, name, ariaLabel, defaultProps) => {
@@ -22,9 +19,12 @@ const testComponent = (component, name, ariaLabel, defaultProps) => {
     render(component);
     const icon = screen.getByRole('img');
     expect(icon).toBeInTheDocument();
+
+    // eslint-disable-next-line playwright/no-conditional-in-test
     if (defaultProps.color) {
       await expect(icon).toHaveAttribute('color', `${defaultProps.color}`);
     }
+
     await expect(icon).toHaveAttribute('width', `${defaultProps.width}`);
     await expect(icon).toHaveAttribute('height', `${defaultProps.height}`);
   });

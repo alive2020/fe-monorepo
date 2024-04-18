@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { types } from '../../src/components/atoms/Button/props';
-import Confirm from '../../src/components/molecules/Modal/Confirm';
-import { sizes } from '../../src/components/molecules/Modal/propTypes';
-import { projects, componentTypes } from '../titlePath';
+import { types } from '../../atoms/Button/props';
+
+import Confirm from './Confirm';
+import { sizes } from './propTypes';
 
 export default {
-  title: `${projects.template}/${componentTypes.molecule}/Modal`,
   component: Confirm,
   argTypes: {
     cancelButtonType: {
